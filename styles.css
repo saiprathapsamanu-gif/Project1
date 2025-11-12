@@ -51,7 +51,7 @@ input[type="text"], input[type="password"]{
 }
 input[type="text"]:focus, input[type="password"]:focus{
   border-color: rgba(11,103,255,0.35);
-  box-shadow:0 0 0 4px rgba(11,103,255,0.06);
+  box-shadow:0 0 0 4px rgba(52, 255, 11, 0.06);
 }
 
 .password-row{display:flex;gap:8px;align-items:center}
