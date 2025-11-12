@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <form id="loginForm" class="card" aria-labelledby="loginTitle" novalidate>
+      <h1 id="loginTitle">Welcome Back</h1>
+
+      <label for="username">Username or Email</label>
+      <input id="username" name="username" type="text" autocomplete="username" required />
+
+      <label for="password">Password</label>
+      <div class="password-row">
+        <input id="password" name="password" type="password" autocomplete="current-password" required />
+        <button id="togglePwd" type="button" aria-label="Show password">Show</button>
+      </div>
+
+      <div class="options">
+        <label class="checkbox">
+          <input id="remember" name="remember" type="checkbox" />
+          Remember me
+        </label>
+        <a href="#" class="forgot">Forgot?</a>
+      </div>
+
+      <button id="submitBtn" class="primary" type="submit">Log in</button>
+
+      <div id="message" role="status" aria-live="polite"></div>
+
+      <p class="hint">Demo credentials: username "user" and password "password"</p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
