@@ -1,0 +1,91 @@
+:root{
+  --bg:#f2f6fb;
+  --card:#ffffff;
+  --primary:#0b67ff;
+  --muted:#6b7280;
+  --error:#d62828;
+  --success:#15803d;
+  --radius:12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#eef6ff 0%,var(--bg) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  color:#111827;
+}
+
+.container{width:100%;max-width:420px}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 24px rgba(12,20,40,0.08);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+h1{
+  margin:0 0 4px 0;
+  font-size:20px;
+  font-weight:600;
+}
+
+label{font-size:13px;color:var(--muted);margin-top:6px}
+input[type="text"], input[type="password"]{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  font-size:15px;
+  outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+  border-color: rgba(11,103,255,0.35);
+  box-shadow:0 0 0 4px rgba(11,103,255,0.06);
+}
+
+.password-row{display:flex;gap:8px;align-items:center}
+.password-row input{flex:1}
+#togglePwd{
+  background:transparent;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  padding:8px 10px;
+  cursor:pointer;
+  font-size:13px;
+}
+
+.options{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+.checkbox{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.forgot{font-size:13px;color:var(--primary);text-decoration:none}
+
+.primary{
+  margin-top:8px;
+  background:var(--primary);
+  color:white;
+  border:none;
+  padding:10px 12px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+.primary:active{transform:translateY(1px)}
+
+#message{min-height:20px;font-size:14px;margin-top:8px}
+#message.error{color:var(--error)}
+#message.success{color:var(--success)}
+
+.hint{font-size:12px;color:var(--muted);margin:6px 0 0}
+@media (max-width:420px){
+  .card{padding:20px}
+}
